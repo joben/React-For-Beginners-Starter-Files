@@ -1,0 +1,32 @@
+import React from "react";
+import { link } from "fs";
+import fishes from "../sample-fishes";
+import { formatPrice } from "../helpers";
+
+class Fish extends React.Component {
+  render() {
+    const { image, name, desc, price, status } = this.props.details; //es6 destructuring
+    const isAvailable = status === "available";
+    return (
+      <li className="menu-fish">
+        <img src={image} />
+        <h3 className="fish-name">
+          {name}
+          <span className="price">{formatPrice(price)}</span>
+        </h3>
+        <p>{desc}</p>
+        <button
+          disabled={!isAvailable}
+          onClick={() => {
+            this.props.addToOrder(this.props.index);
+          }}
+        >
+          {isAvailable ? "Add to Order" : "Sold out!!!"}
+        </button>
+      </li>
+    );
+  }
+}
+
+export default Fish;
+Fish;
