@@ -4,14 +4,14 @@ const Header = props => (
   <header className="top">
     <h1>
       Catch
-      <span className="ofThe">
-        <span className="of">Of</span>
-        <span className="the">The</span>
-      </span>
+      <button className="ofThe">
+        <button className="of">Of</button>
+        <button className="the">The</button>
+      </button>
       Day
     </h1>
     <h3 className="tagline">
-      <span>{props.tagline}</span>
+      <button>{props.tagline}</button>
     </h3>
   </header>
 );

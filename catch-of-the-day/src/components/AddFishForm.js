@@ -31,8 +31,8 @@ class AddFishForm extends React.Component {
           placeholder="price"
         />
         <select name="status" ref={this.statusRef}>
-          <option name="available">Fresh</option>
-          <option name="unavailable">Sold out</option>
+          <option value="available">Fresh</option>
+          <option value="unavailable">Sold out</option>
         </select>
         <textarea name="desc" ref={this.descRef} type="text" />
         <input
